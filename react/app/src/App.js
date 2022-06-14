@@ -1,5 +1,6 @@
-// import logo from './logo.svg';
+
 import './App.css';
+import Person from './components/Person';
 
 
 
@@ -8,11 +9,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Hello Dojo!</h1>
-      <h2>Things I need to do:</h2>
-      <p>* Learn ES6</p>
-      <p>* Learn JSX</p>
-      <p>* Go for a Hike</p>
+      <Person firstName='Bill' lastName='Smith' age='25' hairColor='Blue'/>
+      <Person firstName='Bugs' lastName='Bunny' age='100' hairColor='Grey'/>
+      <Person firstName='Lone' lastName='Ranger' age='80' hairColor='Black'/>
+      <Person firstName='Ed' lastName='Smith' age='25' hairColor='Green'/>
     </div>
   );
 }
