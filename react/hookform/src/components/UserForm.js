@@ -1,20 +1,29 @@
 import React, { useState } from  'react';
 
 const UserForm = (props) => {
-    // const {newUser} = (props);
+    // const {newUser} = props;
 
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");  
     const [confPassword, setConfPassword] = useState("");  
-    
+
+    const checkFirstName = (e) => {
+        setFirstName(e.target.value);
+        if(e.target.value.length < 2) {
+            setTitleError("First Name must be at least 2 characters");
+        } else {
+            setTitleError("");
+        }
+    }    
+
     return (
     <div>
         <form>
             <div>
                 <label>First Name: </label>
-                <input type="text" onChange={(e) => setFirstName(e.target.value)} value={firstName}></input>
+                <input type="text" onChange={ checkFirstName } value={firstName}></input>
             </div>
             <div>
                 <label>Last Name: </label>
