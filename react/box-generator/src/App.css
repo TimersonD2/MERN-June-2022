@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+
+.boxList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  margin: 20px;
+}
+
+label, button {
+  margin-left: 20px;
+}
