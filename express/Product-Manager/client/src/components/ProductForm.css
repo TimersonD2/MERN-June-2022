@@ -1,0 +1,15 @@
+.productForm {
+    border-bottom: 6px solid rgb(135, 121, 121);
+    padding: 20px;
+    margin-left: 50px;
+}
+
+.row {
+    width: 550px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    margin: 10px;
+    background-color: antiquewhite;
+}

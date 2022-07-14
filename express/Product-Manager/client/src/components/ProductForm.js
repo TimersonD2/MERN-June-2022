@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
+import './ProductForm.css';
 
-const ProductForm = (props) => {
+
+const ProductForm = () => {
 
     const [title, setTitle] = useState("");
     const [price, setPrice] = useState("");
@@ -28,22 +30,23 @@ const ProductForm = (props) => {
     }
     
     return (
-    <div>
+    <div className='productForm'>
+        <h2>Product Input Form</h2>
         <form onSubmit={handleSubmit}>
-            <div>
+            <div className='row'>
                 <label htmlFor='title'>Product Title</label>
                 <input type="text" id="title" value={title} style={{width:"400px"}} onChange={(e) => setTitle(e.target.value)}></input>
             </div>
-            <div>
+            <div className='row'>
                 <label htmlFor='price'>Price</label>
                 <input type="text" id="price" value={price} style={{width:"400px"}} onChange={(e) => setPrice(e.target.value)}></input>
             </div>
-            <div>
+            <div className='row'>
                 <label htmlFor='description'>Description</label>
                 <input type="text" id="description" value={description} style={{width:"400px"}} onChange={(e) => setDescription(e.target.value)}></input>
             </div>
             <div>
-                <button>add</button>
+                <button>Add Product</button>
             </div>
         </form>
     </div>
