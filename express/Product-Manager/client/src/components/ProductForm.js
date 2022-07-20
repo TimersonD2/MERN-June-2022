@@ -3,7 +3,9 @@ import axios from 'axios';
 import './ProductForm.css';
 
 
-const ProductForm = () => {
+const ProductForm = (props) => {
+
+    const {products, setProducts} = props;
 
     const [title, setTitle] = useState("");
     const [price, setPrice] = useState("");
@@ -11,22 +13,17 @@ const ProductForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        //make a post request to create a new person
         axios.post('http://localhost:8000/api/products', {
-            title,    // this is shortcut syntax for firstName: firstName,
-            price,      // this is shortcut syntax for lastName: lastName
-            description,      // this is shortcut syntax for lastName: lastName
+            title,
+            price,
+            description,
         })
         .then(res=>{
-            console.log(res); // always console log to get used to tracking your data!
+            console.log(res);
             console.log(res.data);
+            setProducts([...products, res.data]);
         })
         .catch(err=>console.log(err))
-
-
-        console.log("Title: ", title);
-        console.log("Price: ", price);
-        console.log("Description: ", description);
     }
     
     return (

@@ -4,6 +4,6 @@ const mongoEndPoint = 'mongodb://localhost/';
 const dbName = 'product-db';
 
 mongoose.connect(mongoEndPoint + dbName)
-    .then(() => console.log('Connected to the ${dbName} database'))
+    .then(() => console.log(`Connected to the ${dbName} database`))
     .catch((err) => console.log('Error connecting to database', err))
 

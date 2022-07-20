@@ -14,6 +14,9 @@ const ProductEdit = () => {
         .then((res) => {
             console.log(res.data)
             setProduct(res.data)
+            setTitle(res.data.title);
+            setPrice(res.data.price);
+            setDescription(res.data.description);
         })
         .catch(err => console.log('Error in getting one Product', err))
     }, [id]);
@@ -30,11 +33,6 @@ const ProductEdit = () => {
             console.log(res.data);
         })
         .catch(err=>console.log(err))
-
-
-        console.log("Title: ", title);
-        console.log("Price: ", price);
-        console.log("Description: ", description);
     }
 
     return (

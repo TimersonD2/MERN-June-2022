@@ -40,7 +40,7 @@ const updateProductById = (req, res) => {
 };
 
 const deleteProduct = (req, res) => {
-    Product.deleteOne(req.body)
+    Product.deleteOne({_id: req.params.id})
         .then((result) => {
             res.status(201).json(result);
         })
