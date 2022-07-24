@@ -1,0 +1,72 @@
+table, th, td {
+    border: 2px solid black;
+}
+
+table {
+    width: 600px;
+    overflow: auto;
+    /* height: 200px; */
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+th {
+    background-color: rgb(144, 142, 142);
+    color: white;
+    font: bolder;
+    font-size: x-large;
+    padding: 10px;
+}
+td {
+    color: rgb(170, 88, 170);
+}
+
+.authorList {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.listTitle {
+    color: purple;
+    margin: 0px;
+    text-align: center;
+}
+
+.tableText {
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.editBtn, .deleteBtn {
+    background-color: rgb(108, 108, 255);
+    color: white;
+    margin: 10px;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    height: 40px;
+    width: 60px;
+    font: bolder;
+    font-size: medium;
+    background-image: linear-gradient(lightblue, darkblue);
+}
+
+.navLink {
+    margin: 20px;
+    padding: 20px;
+    color: blue;
+    text-align: center;
+}
+
+.authors {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    /* height: 400px;
+    overflow: auto;
+    width: 600px; */
+}
+
+
+

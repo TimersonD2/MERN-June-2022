@@ -1,0 +1,39 @@
+.formTitle {
+    color: purple;
+    margin: 0px;
+}
+
+.text-danger {
+    color: red;
+}
+
+.navLink {
+    margin: 0px;
+}
+
+.newForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formBtn {
+    margin-top: 20px;
+}
+
+.authorBtn {
+    background-color: rgb(49, 101, 255);
+    color: white;
+    cursor: pointer;
+    height: 50px;
+    width: 80px;
+    margin: 10px;
+    font: bolder;
+    font-size: larger;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
